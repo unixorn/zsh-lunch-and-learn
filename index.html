@@ -25,8 +25,154 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>Quick ZSH Intro</h1>
+
+				<p> by Joe Block <a href="mailto:jblock@castlighthealth.com">&#60;jblock@castlighthealth.com&#62;</a></p>
+				</section>
+
+				<section data-markdown>
+					# What is ZSH? Why do I care?
+
+					* It's a newer shell.
+					* As of Catalina, it's the new default shell in macOS
+					* It's easy to customize
+				</section>
+
+				<section data-markdown>
+					# Why ZSH?
+
+					* It's faster.
+					* It's better than `bash` in a bunch of ways.
+				</section>
+
+				<section data-markdown>
+					# Quick Tour of some features
+				</section>
+
+				<section data-markdown>
+					# Tab Completions
+				</section>
+
+				<section data-markdown>
+					## Tab completion of arguments
+
+					Tab completion works for command line arguments, not just commands.
+				</section>
+
+				<section data-markdown>
+					## Tab completion in `cd`
+
+					Tab completion works for `cd`, not just commands.
+					You can do nice things like `cd /u/lo/b` and get into `/usr/local/bin`
+				</section>
+
+				<section data-markdown>
+					## tab complete process IDs
+
+					You can do things like `kill firefox -TAB`
+				</section>
+
+				<section data-markdown>
+					## tab complete `ssh` hostnames
+
+					`ssh blah` -TAB
+				</section>
+
+				<section data-markdown>
+					## tab complete `git` branches
+				</section>
+
+				<section data-markdown>
+					## Even more tab completions
+
+					The zsh-users mailing list maintains a repo with _tons_ of completions at [https://github.com/zsh-users/zsh-completions](github.com/zsh-users/zsh-completions)
+				</section>
+
+				<section data-markdown>
+					# Command History
+				</section>
+
+				<section data-markdown>
+					## Command-specific history
+
+					Type a command, then up-arrow through the history of commands starting with that
+				</section>
+
+				<section data-markdown>
+					## Shared History
+
+					`setopt share_history`
+
+					Now all your shells on the machine share command history. No more closing a window and losing the history in it
+				</section>
+
+				<section data-markdown>
+					## Fun with globbing
+
+					`ls ~/z/**/*.sh`
+
+					The `**` looks in all the subdirs, not just one level
+				</section>
+
+				<section data-markdown>
+					## Target Globbing to Files or Directories
+					`ls **/*(.)`
+
+					Just the files
+
+					`ls **/*(/)`
+
+					Just directories
+				</section>
+
+				<section data-markdown>
+					## More Globbing - Target by Size
+
+					`ls -lah **/*(.Lg-1)`
+
+					Files < 1 GB
+
+					`ls -lah **/*(.Lm+10)`
+
+					Files > 10 MB
+				</section>
+
+				<section data-markdown>
+					# Miscellaneous cool bits
+				</section>
+
+				<section data-markdown>
+					## Syntax highlighting
+
+					Downloadable at [github.com/zsh-users/zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+				</section>
+
+				<section data-markdown>
+					## Autosuggestions
+
+					Download at [github.com/zsh-users/zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+				</section>
+
+				<section data-markdown>
+					## AutoCD
+
+					`setopt autocd`
+
+					Just type the name of a directory to `cd` to it.
+				</section>
+
+				<section data-markdown>
+					## Mass file renames
+
+					`autoload -U zmv` to enable
+
+					`zmv '(*).foo' '$1.txt'`
+				</section>
+				<section data-markdown>
+				</section>
+
 			</div>
 		</div>
 
